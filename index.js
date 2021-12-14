@@ -58,12 +58,30 @@ const questions = [
 ]
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {  
+  return new Promise ((resolve, reject) => {
+  fs.writeFile('./dist/index.html', fileContent, err => {
+      if(err) {
+          reject(err);
+          return;
+      }
+      resolve({
+          ok: true,
+          message: "ReadMe created!"
+      });
+  });
+});
+};
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
+    .then ((userAnswers) => {
+      writeToFile('${userAnswers.name}.md', generateMarkdown({...userAnswers}));
+})
 }
 
 // Function call to initialize app
 init();
+
+// github username, email address, project name, short description, license list and can choose none, to install dependencies, command to run test, know about using the repo, need to know about contributing 
