@@ -1,10 +1,23 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (!license) {
+    return "";
+  }
+
+  return;
+};
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) {
+    return "";
+  }
+
+  return;
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -25,41 +38,41 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-
-  # ${data.title}
+  # ${data.name}
 
   ## Description
+
+  ${data.description}
 
   ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
-  * [Features](#features)
-  * [Questions](#questions)
   * [Contributions](#contributions)
   * [Tests](#tests)
+  * [Questions](#questions)
 
   ## Installation
 
+  ${data.install}
+
   ## Usage
 
-  ## Credits
-
-  ${renderLicenseSection(license)}
-  
-  ## Features
-
-  ## Questions
-
-  If you have any questions, please feel free to reach out at 
-  Email: 
-  GitHub: 
+  ${data.usage}
 
   ## Contributions
 
+  ${data.contributions}
+
   ## Tests
+
+  ${data.test}
+
+  ## Questions
+
+  If you have any questions about the repo, open an issue, or contact me directly at ${data.email}. Also, you can
+  find more of my work at github.com/${data.github}.
 
 `;
 }
