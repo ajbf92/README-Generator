@@ -46,12 +46,12 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributions](#contributions)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributions](#Contributions)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
   ## Installation
 
@@ -71,8 +71,7 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  If you have any questions about the repo, open an issue, or contact me directly at ${data.email}. Also, you can
-  find more of my work at github.com/${data.github}.
+  If you have any questions about the repo, open an issue, or contact me directly at ${data.email}. Also, you can find more of my work on github: [click link](https://github.com/${data.github}.
 
 `;
 }
